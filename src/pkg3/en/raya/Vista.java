@@ -7,6 +7,7 @@ package pkg3.en.raya;
 
 
 import javafx.scene.paint.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 public class Vista extends javax.swing.JFrame {
@@ -27,6 +28,7 @@ public class Vista extends javax.swing.JFrame {
     public Vista() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setIconImage(new ImageIcon(getClass().getResource("/img/consola.png")).getImage());
         lbs[0]=Casilla1;
         lbs[1]=Casilla2;
         lbs[2]=Casilla3;
@@ -339,7 +341,9 @@ public class Vista extends javax.swing.JFrame {
           Lbpts2.setText(Integer.toString(Integer.parseInt(Lbpts2.getText())+1));    
           Lbturn.setText("Ganó O");  
           estado = false;
-       }
+       }else{
+           Lbturn.setText("Empate");     
+          }
      }
    }     
     public static void main(String args[]) {
